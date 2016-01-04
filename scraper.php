@@ -4,11 +4,12 @@ $run_environment = 'prod'; // either 'dev' or 'prod'
 $max_records = 4; // only used for testing
 
 if ($run_environment == 'dev') {
-    error_reporting(E_ALL);     
-    require 'scraperwiki.php';
+    error_reporting(E_ALL);
+    ini_set('display_errors','On');   
+    new scraperwiki('');
 }
 
-
+require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 
 
